@@ -1,0 +1,118 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+@font-face{
+    src:url(../fonts/Poppins-Regular.ttf);
+    font-family:Poppins-Regular;
+}
+@font-face{
+    src:url(../fonts/Roboto-Regular.ttf);
+    font-family:Roboto-Regular;
+}
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:1.3rem;
+    color:rgb(36, 35, 35);
+    font-family:roboto-regular;
+    background: rgb(226, 221, 221);
+}
+.container{
+    width:100%;
+    min-height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+   
+}
+#edit-container{
+    margin-top:100px;
+    width: 800px;
+    /* height:800px; */
+    padding:1.2rem;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    /* border:1px solid black; */
+    margin-bottom:100px;
+    background: #fff;
+}
+#edit-container #item-image-container{
+    width:300px;
+    height:250px;
+    transform:translate(200px,0);
+}
+#edit-container #item-image-container img{
+    width:100%;
+    height:100%;
+}
+#input{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#input input{
+    width:100%;
+    margin-bottom:10px;
+    height:40px;
+    margin-top:5px;
+    padding-left:10px;
+    /* border:1px solid rgb(92, 90, 90) !important; */
+    font-size:1.2rem;
+}
+button{
+    width:250px;
+    height:40px;
+    border-radius: none;
+    /* border:1px solid black; */
+    font-size:1rem;
+    color:white;
+    background-color: rgb(78, 176, 241);
+    text-transform: uppercase;
+    border:none;
+}
+#edit-container h2{
+    width:100%;
+    text-align:center;
+    margin-bottom:20px;
+}
+.cancel{
+    margin-left:20px;
+    width:250px;
+    height:40px;
+    border:1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    text-decoration:none;
+    font-size:1.2rem;
+    color:rgb(31, 30, 30);
+    border:none;
+    margin-bottom:100px;
+    background:rgb(243, 48, 48);
+    color:white;
+    text-transform: uppercase;
+    
+}
+#box{
+    display:flex;
+    width:100%;
+    justify-content: center;
+    margin-top:20px;
+}
+
+#release-box{
+    margin:auto;
+    display:flex;
+    text-transform: uppercase;
+}
+.release{
+    margin-left:1rem;
+    width:20px;
+    height:20px;
+}
+.pending{
+    color:orange;
+}

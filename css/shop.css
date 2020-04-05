@@ -1,0 +1,289 @@
+body{
+    overflow-x: hidden !important;
+}
+.items-title{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    font-size:28px;
+    transform:translateY(50px);
+    margin-left:100px;
+    /* animation: side 1.5s ease !important; */
+}
+@keyframes side{
+    0%{
+        opacity:0;
+        transform:translateY(-150px);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(50px);
+    }
+}
+#item-page{
+    width:100%;
+    min-height:100vh;    
+    display:grid;
+    grid-template-columns: repeat(3,350px);
+    grid-template-rows: min-max(470px,1fr);
+    justify-content: center;
+    grid-gap:30px;
+    padding: 100px 30px;
+    padding-top:110px;
+    z-index:1;
+}
+#item-container{
+    padding:5px!important;
+    width:350px;
+    min-height:470px;
+    display:flex;
+    flex-direction: column;
+    border: 1px solid rgb(155, 154, 154) !important;
+    border-radius:5px;
+    margin-bottom:50px;
+    margin-right:20px;
+    /* animation: appear 2s ease; */
+
+}
+#item-container .box{
+    width:100%;
+    max-height:70%;
+    background:rgba(192, 188, 188, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+#item-container .box img{
+    width:100%;
+    height:100%;
+    padding: 20px;
+}
+#btn-buy{
+    width:100px;
+    height:30px;
+    border-radius:15px;
+    background:rgba(230, 226, 226, 0.795); 
+    border:1px solid#777676; 
+    cursor:pointer;
+    z-index:500;
+    color:darkorange!important;
+
+}
+#btn-buy a{
+    color:darkorange!important;
+}
+.btn-buy{
+    transform:translate(230px,-15px);
+}
+#btn-order-exit{
+    color:rgb(26, 25, 25)!important;
+}
+#btn-buy:hover {
+    background:rgb(243, 177, 56);
+    color:white !important;
+    padding-left:10px;
+    border:1px solid #777676;
+    transition: .5s ease;
+    color:darkblue;
+}
+.item-details{
+    width:100%;
+    min-height:30%;
+    padding:5px 10px;
+}
+.price{
+    font-weight: bold;
+    color:black !important;
+    text-shadow: 2px 2px 3px rgb(238, 86, 86) !important;
+    z-index:500;
+    width:100px !important;
+    transform:translate(10px,280px);
+}
+#order-page{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+}
+#order-form{
+    width:500px;
+    height:500px;
+    border:2px solid rgb(28, 28, 29);
+    padding:10px 15px;
+    background:rgba(224, 220, 220, 0.7);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:black;
+    /* text-shadow: 1px 1px 2px red; */
+    font-size:18px;
+}
+.label{
+    display:flex;
+    flex-direction: column;
+    padding:10px 10px;
+}
+.label li{
+    padding:20px 20px;
+}
+.inputs{
+    display:flex;
+    flex-direction: column;
+    padding:10px 10px;
+    /* transform:translateY(5px); */
+}
+.inputs li{
+    padding:20px 20px;    
+}
+.order-title{
+    margin-right:auto;
+    margin-left:90px;
+}
+.btn-submit{
+    width:100px !important;
+    height:30px !important;
+    transform: translate(-160px,220px);
+    background:rgba(230, 226, 226, 0.795)!important; 
+    border:1px solid#0c0b0b; 
+    color: darkblue;
+    border-radius:10px!important;
+}
+.btn-submit:hover{
+    background:rgba(190, 187, 187, 0.795)!important; 
+    color: black;
+}
+.a{
+    transition:2s ease;
+}
+/* order modal */
+#order-modal{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    width:350px;
+    height:200px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* border:1px solid rgb(172, 168, 168); */
+    background:rgb(230, 225, 225);
+    border-radius: 5px;
+    font-size:1.3rem;
+    box-shadow: 2px 2px 5px rgb(82, 80, 80);
+    border:none !important;
+}
+#order-success{
+    position:fixed;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    width:330px !important;
+    height:280px !important;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* border:1px solid rgb(172, 168, 168); */
+    background:rgb(255, 255, 255);
+    border-radius: 5px;
+    font-size:1.1rem;
+    box-shadow: 2px 2px 5px rgb(82, 80, 80);
+    border:none !important;
+    padding:10px;
+    text-align:center;
+}
+#order-successful{
+    position:fixed;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    width:330px !important;
+    height:280px !important;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    text-align:center;
+
+}
+#okayBtn{
+    color:white;
+    background-color: rgb(78, 176, 241);
+    width:50px;
+    height:30px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    border-radius: 5px;
+    font-size:1rem;
+    border:1px solid white;
+}
+.receipt{
+    position:absolute;
+    top:100px;
+    right:1rem;
+    width:150px;
+    height:30px;
+    background:rgb(49, 49, 49);
+    color:white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:5px;
+}
+.mail{
+    position:absolute;
+    top:100px;
+    right:1rem;
+    width:250px;
+    height:30px;
+    background:rgb(49, 49, 49);
+    color:white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:5px;
+}
+.failed{
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    text-align:center;
+}
+@media(max-width:1000px){
+    #item-page{
+        grid-gap:20px;
+       
+    }
+}
+@media(max-width:1000px){
+    #item-page{
+        flex-wrap: wrap;
+    }
+    #item-page{
+       
+        grid-template-columns: repeat(2,330px);
+        grid-template-rows: min-max(350px,1fr);
+    }
+}
+@media(max-width:750px){
+    
+    #item-container{
+       margin-bottom:20px;
+    }
+    #item-page{
+        grid-template-columns: repeat(1,350px);
+        grid-template-rows: min-max(350px,1fr);
+    }
+   
+}
+@media(max-width:600px){
+    .items-title{
+        margin-left:60px;
+    }
+}
